@@ -78,7 +78,10 @@ class App extends Component {
             </h3>
           </Col>
           <Col xs="6">
-            <Navigation handleCurrentSet={this.handleCurrentSet} />
+            <Navigation
+              handleCurrentSet={this.handleCurrentSet}
+              set={this.state.set}
+            />
             <ListGroup flush>
               {heroes.length > 0 && this.getHeroes(this.state.set)}
             </ListGroup>
