@@ -1,3 +1,24 @@
+Le projet a vocation à appuyer les échanges lors de l'entretien. Pour rappel, l'objectif de l'exercice est le suivant :
+
+- Utiliser l'api de Marvel pour afficher 20 personnages à partir du 100 ème.
+- La liste doit être cliquable et afficher les détails d'un personnage
+- L'application doit être testée
+- Il faut veiller à la sécurité
+- Veiller à la performance (ou proposer des pistes d'amélioration : par exemple stocker les données en local storage et ne faire la requête en get que si le storage est vide ou si les données sont anciennes).
+
+## Installation
+
+Vous devez avoir l'environnement de travail Node sur votre poste. Si vous ne l'avez pas vous pouvez l'installer via sudo apt install nodejs-legacy
+
+Ensuite, pour lancer le serveur :
+
+- Cloner le répertoire avec Git
+- Rendez vous dans le dossier créé (commande cd marvel)
+- Installez les dépendances avec npm (npm install)
+- Lancez la commande npm start pour lancer le projet, le navigateur va être ouvert automatiquement sur le port 3000, le site devrait s'afficher.
+
+## Documentation React app
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
