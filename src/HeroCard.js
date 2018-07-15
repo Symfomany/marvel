@@ -25,7 +25,7 @@ class HeroCard extends Component {
           top
           width="100%"
           src={`${hero.thumbnail.path}/landscape_incredible.jpg`}
-          alt="Card image cap"
+          alt="Photo"
         />
         <CardBody>
           <CardTitle>{hero.name}</CardTitle>
@@ -46,7 +46,7 @@ class HeroCard extends Component {
         <CardFooter>
           <h6 className="text-muted d-flex justify-content-between align-items-center">
             Présence dans les comics{" "}
-            <span class="badge badge-primary badge-pill">
+            <span className="badge badge-primary badge-pill">
               {hero.series.available}
             </span>
           </h6>

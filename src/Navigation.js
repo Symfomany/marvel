@@ -7,53 +7,43 @@ class Navigation extends Component {
     this.sendCurrent = this.sendCurrent.bind(this);
   }
   render() {
-    console.log(this.props.set);
     return (
       <nav aria-label="Page navigation example">
         <ul className="pagination justify-content-center">
-          <li className={`page-item ${this.props.set === 0 ? "active" : null}`}>
-            <a className="page-link" onClick={() => this.sendCurrent(0)}>
-              1
-            </a>
-          </li>
-          <li className={`page-item ${this.props.set === 4 ? "active" : null}`}>
-            <a className="page-link" onClick={() => this.sendCurrent(4)}>
-              2
-            </a>
-          </li>
-          <li className={`page-item ${this.props.set === 7 ? "active" : null}`}>
-            <a className="page-link" onClick={() => this.sendCurrent(7)}>
-              3
-            </a>
-          </li>
-          <li
-            className={`page-item ${this.props.set === 11 ? "active" : null}`}
-          >
-            {" "}
-            <a className="page-link" onClick={() => this.sendCurrent(11)}>
-              4
-            </a>
-          </li>
-          <li
-            className={`page-item ${this.props.set === 15 ? "active" : null}`}
-          >
-            <a className="page-link" onClick={() => this.sendCurrent(15)}>
-              5
-            </a>
-          </li>
-          <li
-            className={`page-item ${this.props.set === 19 ? "active" : null}`}
-          >
-            <a className="page-link" onClick={() => this.sendCurrent(19)}>
-              6
-            </a>
-          </li>
+          {this.createList()}
         </ul>
       </nav>
     );
   }
+
+  //========================================= FONCTIONS =================================
+
+  /**
+   * Envoie au parent l'id du set sélectionné par l'utilisateur
+   */
   sendCurrent(id) {
     this.props.handleCurrentSet(id);
+  }
+
+  /**
+   * Crée les puces de navigation + classe ACTIVE sur la puce du personnage courant
+   */
+  createList() {
+    const sets = [0, 4, 8, 12, 16];
+    let pageNumber = 0;
+    return sets.map(elt => {
+      pageNumber += 1;
+      return (
+        <li
+          key={pageNumber}
+          className={`page-item ${this.props.set === elt ? "active" : null}`}
+        >
+          <a className="page-link" onClick={() => this.sendCurrent(elt)}>
+            {pageNumber}
+          </a>
+        </li>
+      );
+    });
   }
 }
 

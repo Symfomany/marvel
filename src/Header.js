@@ -1,13 +1,9 @@
 import React, { Component } from "react";
-import { Jumbotron, Row, Col, Button } from "reactstrap";
+import { Jumbotron, Row, Col } from "reactstrap";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import cover from "./The_Marvel_Universe.png";
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <Row>
@@ -20,7 +16,7 @@ class Header extends Component {
               transitionEnter={false}
               transitionLeave={false}
             >
-              <img className="img-fluid" src={cover} />
+              <img className="img-fluid" src={cover} alt="Marvel Company" />
               <h1>
                 <span className="display-1">We can be heroes</span>
                 <br />
@@ -38,9 +34,6 @@ class Header extends Component {
               Travaillez dans un cadre unique, au sein des locaux de Merveil,
               vous aurez droit aux tickets restaurants et accès à la machine à
               crêpe fournis.
-            </p>
-            <p className="lead">
-              <Button color="primary">Rejoindre notre équipe</Button>
             </p>
           </Jumbotron>
         </Col>
